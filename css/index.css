@@ -1,0 +1,246 @@
+@font-face{
+    font-family: "Inter Normal";
+    src: url("../fonts/Inter-VariableFont.ttf") format("woff2");
+}
+*{
+    font-family: "Inter Normal";
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+.mainInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 420px;
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+h1{
+    display: block;
+    position: relative;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 26%;
+    z-index: 2;
+}
+.headline1{
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-out .5s 1 normal forwards;
+}
+.headline2{
+    opacity: 0;
+    animation: fadeInAnimation 1.3s ease-out .8s 1 normal forwards;
+}
+.headline3, .headline4{
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-out 1s 1 normal forwards;
+}
+.headline5{
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-out 1.5s 1 normal forwards;
+}
+h2{
+    display: block;
+    position: relative;
+    color: #000;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 10%;
+    z-index: 2;
+}
+.illustrationSVG{
+    display: block;
+    position: absolute;
+    padding: 2% 0 0 10%;
+    width: min(86%, 1246px);
+    height: auto;
+    animation: fadeInAnimation 1s ease-out 0s 1 normal forwards;
+}
+.generationOptions{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 5px;
+}
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    width: 524px;
+    height: 331px;
+    margin: 2%;
+}
+.optionImg{
+    display: block;
+    position: relative;
+    height: 150px;
+    width: auto;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-out 1.2s 1 normal forwards;
+}
+.optionRect{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: auto;
+    height: 270px;
+    min-width: 320px;
+    margin-top: 85px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    background-color: #f6f8fb;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: .5s ease;
+}
+.optionRect:hover, .option .optionImg:hover ~ .optionRect{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+}
+h3{
+    display: block;
+    position: relative;
+    padding: 0 25px;
+    margin-bottom: 0;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-out 1.4s 1 normal forwards;
+}
+.optionDescription{
+    display: block;
+    position: relative;
+    color: #000;
+    font-size: 14px;
+    padding: 0 45px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-out 1.4s 1 normal forwards;
+}
+.generateButton{
+    display: block;
+    position: relative;
+    width: 132px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    color: #FFF;
+    font-size: 12px;
+    padding: 8px 17px;
+    font-weight: 400;
+    background-color: #ED1C24;
+    cursor: pointer;
+    transition: .3s ease;
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-out 1.4s 1 normal forwards;
+}
+.generateButton:hover{
+    background-color: #d60007;
+}
+.generateButton:active{
+    background-color: #d60007;
+}
+@keyframes fadeInAnimation{
+    from {opacity: 0;}
+    to {opacity: 1;} 
+}
+@media (max-width: 1139px) and (min-width: 915px) {
+    h1, h2{transform: scale(.9);}
+    .option{width: 448px;}
+    .illustrationSVG{min-height: 500px;}
+    .topBlurredCircleSVG{transform: translateY(-50px);}
+    .bottomLeftBlurredCircleSVG, .bottomRightBlurredCircleSVG{transform: translateY(50px);}
+    .bottomRightCircleSVG{transform: translateX(70px);}
+}
+@media (max-width: 974px) and (min-width: 550px) {
+    h1, h2{transform: scale(.8);}
+    .option{flex-grow: .5;}
+    .optionImg{min-height: 140px;}
+    h1{margin: 0 15%;}
+    .generationOptions .option:not(:first-child){margin: 90px 2%;}
+    .illustrationSVG{min-height: 460px;}
+    .planesSVG{transform: translate(80px, 75px) scale(.9);}
+    .topBlurredCircleSVG{transform: translate(180px, -120px) scale(1.2);}
+    .topLeftCircleSVG{transform: translate(70px, -120px) scale(1.2);}
+    .middleBlurredCircleSVG{transform: translate(80px, -80px) scale(1.2);}
+    .bottomRightBlurredCircleSVG{transform: translate(-100px, 60px) scale(1.2);}
+    .bottomRightCircleSVG{transform: translateX(-240px) scale(1.2);}
+    .bottomLeftBlurredCircleSVG{transform: translate(80px, -20px) scale(1.2);}
+}
+@media (max-width: 730px) and (min-width: 550px) {
+    .topBlurredCircleSVG{transform: translate(-10px, -230px) scale(1.5);}
+    .topLeftCircleSVG{transform: translate(10px, -200px) scale(1.5);}
+    .middleBlurredCircleSVG{transform: translate(60px, -150px) scale(1.5);}
+    .bottomRightBlurredCircleSVG{transform: translate(-300px, 20px) scale(1.5);}
+    .bottomRightCircleSVG{transform: translate(-530px, -60px) scale(1.5);}
+    .bottomLeftBlurredCircleSVG{transform: translate(-30px, -10px) scale(1.5);}
+    .envelopeSVG{transform: translateY(-40px) scale(1.2);}
+    .planesSVG{transform: translate(-30px, 75px) scale(1.1);}
+    .smallPlaneSVG{visibility: hidden;}
+}
+@media (max-width: 550px) {
+    h1{margin: 0 12%; font-size: 18px; transform: scale(.9);}
+    h2{font-size: 40px; padding: 0 5%; margin-bottom: -15px; transform: scale(.9);}
+    .mainInfo{max-height: 350px; margin-top: 0;}
+    .generationOptions .option{margin: -25px 0; transform: scale(.7);}
+    .illustrationSVG{min-height: 360px;}
+    .smallPlaneSVG{visibility: hidden;}
+    .bottomRightCircleSVG{visibility: hidden;}
+    .planesSVG{transform: translate(-30px, 75px) scale(1.1);}
+    .envelopeSVG{transform: scale(1.2);}
+    .topBlurredCircleSVG{transform: translate(-240px, -260px) scale(1.8);}
+    .topLeftCircleSVG{transform: translate(30px, -260px) scale(1.8);}
+    .middleBlurredCircleSVG{transform: translate(60px, -190px) scale(1.8);}
+    .bottomRightBlurredCircleSVG{transform: translate(-500px, -25px) scale(1.8);}
+    .bottomLeftBlurredCircleSVG{transform: translate(-30px, -100px) scale(1.8);}
+}
+@media (max-width: 450px) and (min-width: 350px) {
+    h1, h2{transform: scale(.75);}
+    .option{min-width: 430px;}
+    .topBlurredCircleSVG{transform: translate(-240px, -330px) scale(1.8);}
+    .topLeftCircleSVG{transform: translate(30px, -330px) scale(1.8);}
+    .bottomRightBlurredCircleSVG{transform: translate(-500px, 80px) scale(1.8);}
+    .bottomLeftBlurredCircleSVG{transform: translate(-100px, 15px) scale(1.8);}
+}
+@media (max-width: 350px) {
+    .mainInfo{min-width: 300px; max-height: 200px;}
+    .generationOptions{min-width: 300px;}
+    h1{transform: scale(.6);}
+    h2{transform: scale(.55); padding: 0;}
+    .middleBlurredCircleSVG{transform: translate(60px, -120px) scale(1.8);}
+    .generationOptions .option{margin: -70px 0; transform: scale(.5);}
+    .illustrationSVG{width: 265px; height: 305px;}
+}
+

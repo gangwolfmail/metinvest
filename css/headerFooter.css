@@ -1,0 +1,151 @@
+@font-face{
+    font-family: "Inter Normal";
+    src: url("../fonts/Inter-VariableFont.ttf") format("woff2");
+}
+*{
+    font-family: "Inter Normal";
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 74px;
+    max-width: 1440px;
+    box-sizing: border-box;
+    background: #FFF;
+}
+.logo{
+    height: 26px;
+    width: auto;
+    padding: 0 min(11%, 160px);
+}
+.languageSwitcher{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 68px;
+    padding: 12px;
+    align-items: center;
+    margin-right: min(11%, 160px);
+    z-index: 4;
+}
+.pageLanguage{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+}
+.languageSwitcherArrow{
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+}
+.wrapperLanguage{
+    display: flex;
+    position: absolute;
+    width: auto;
+    height: 10px;
+    bottom: 0;
+    left: -19px;
+}
+.languageOptions{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    bottom: 0;
+    background-color: #f6f8fb;
+    width: 90px;
+    height: 0;
+    min-width: 90px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    opacity: 0;
+    transition: .1s ease;
+}
+.languageOptions a:nth-child(2) > li{
+    font-weight: 600;
+    font-style: normal;
+}
+.languageChoice{
+    display: block;
+    position: relative;
+    font-size: 0px;
+    font-weight: 400;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .1s ease;
+}
+.languageChoice:hover{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.languageChosenSVG{
+    display: block;
+    position: absolute;
+    width: 4px;    
+    height: 0;
+    min-height: 0;
+    left: 0;
+    margin: -3px 0 0 0;
+    opacity: 0;
+    transition: .1s ease;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background-color: #1C1D1E;
+    margin-top: 75px;
+}
+.footerWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+}
+.footer p{
+    color: #818A8F;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 11%;
+    transition: .5s ease;
+}
+.footer p:first-child:hover{
+    color: #a4b0b7;
+}
+.errorNotification{
+    cursor: pointer;
+}
+@media (max-width: 550px) {
+    .footer{min-height: 140px;}
+    .footer p{margin: 10px 0;} 
+    .footerWrapper{flex-direction: column; justify-content: center; align-items: center;}
+
+}
+@media (max-width: 350px) {
+    .header{padding: 0 1%; min-width: 300px;}
+    .logo{transform: scale(.7);}
+    .languageSwitcher{transform: scale(.7);}
+    .wrapperLanguage{transform: scale(.7); left: -23px;}
+    .pageLanguage{font-size: 10px;}
+    .languageSwitcherArrow{height: 20px; margin-bottom: 2px;}
+    .footer{min-width: 300px;}
+    .footer p{transform: scale(.7);}
+}
+

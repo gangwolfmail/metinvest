@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+        <link rel="stylesheet" type="text/css" href="css/emailSignature.css">
+        <link rel="stylesheet" type="text/css" href="css/headerFooter.css">
+        <script type="text/javascript" src="js/dataAboutCompany.js"></script>
+        <script type="text/javascript" src="js/libs/qrcode.min.js"></script>
+        <script type="text/javascript" src="js/encoded_base64.js" defer></script>
+        <title>Підпис до листа</title>
+    </head>
+    <body>
+        <section class="header">
+            <svg class="logo" viewBox="0 0 148 28" fill="none">
+                <path d="M52.8024 7.01172V21.0048H63.8484V18.5703L55.8453 18.5914V15.1408H63.8484V12.7063L55.8453 12.6851V9.44621H63.8484V7.01172H52.8024Z" fill="black"/>
+                <path d="M77.6233 21.0047V6.99048H80.5411V21.0047H77.6233Z" fill="black"/>
+                <path d="M39.5664 6.99048L43.0053 17.9351L46.6317 6.99048H50.9042V21.0047H48.1115V10.5046L44.5059 21.0047H41.4839L38.0867 10.5046V21.0047H35.2731V6.99048H39.5664Z" fill="black"/>
+                <path d="M69.1838 9.48848H64.7863V6.99048H76.6868V9.48848H72.1016V21.0047H69.1838V9.48848Z" fill="black"/>
+                <path d="M110.762 7.01172V21.0048H121.809V18.5703H113.805V15.1408H121.809V12.7063L113.805 12.6851V9.44621H121.809V7.01172H110.762Z" fill="black"/>
+                <path d="M140.42 9.48848H136.022V6.99048H147.923V9.48848H143.338V21.0047H140.42V9.48848Z" fill="black"/>
+                <path d="M91.8178 17.046L86.1489 6.99048H82.4808V21.0047H85.4611L85.3361 10.3988L91.2759 21.0047H94.6314V6.99048H91.6719L91.8178 17.046Z" fill="black"/>
+                <path d="M102.737 17.427L98.6107 6.99048H95.2969L101.32 21.0047H104.342L110.073 6.99048H106.989L102.737 17.427Z" fill="black"/>
+                <path d="M131.251 12.8544H127.416C126.207 12.8544 125.603 12.3464 125.603 11.3302C125.603 10.0601 126.291 9.48848 127.833 9.48848H135.002V6.99048H127.416C125.728 6.99048 124.498 7.32919 123.748 8.02778C122.956 8.70521 122.581 9.80602 122.581 11.2879C122.581 14.0823 123.998 15.3101 127.187 15.3101H130.626C132.126 15.3101 132.668 15.7547 132.668 16.919C132.668 18.0621 132.064 18.5067 130.417 18.5067H123.143V21.0047H130.876C134.21 21.0047 135.711 19.6922 135.711 16.792C135.711 15.3736 135.377 14.3575 134.69 13.7647C133.981 13.1508 132.835 12.8544 131.251 12.8544Z" fill="black"/>
+                <path d="M21.5389 1.93092C21.5389 1.93092 19.7256 1.16882 19.4755 1.06297C19.2254 0.957121 18.9753 0.935951 18.7044 0.999459C18.4335 1.06297 18.2459 1.21115 18.1417 1.317C18.0375 1.42285 14.1401 5.38155 14.1401 5.38155C14.1401 5.38155 10.2844 1.46519 10.1594 1.33817C10.0343 1.21115 9.88845 1.08414 9.57583 0.999459C9.26321 0.914781 8.99227 0.97829 8.82554 1.06297C8.6588 1.12648 6.99148 1.84624 6.76223 1.93092C6.53297 2.0156 6.32455 2.20612 6.17866 2.43899C6.07446 2.62951 5.99109 2.84121 5.99109 3.09524C5.99109 2.86238 5.99109 8.59932 5.99109 8.59932L9.57583 10.6951V5.91079L11.2432 7.60435C11.3682 7.73137 11.5141 7.81604 11.6808 7.87955C11.8059 7.92189 11.9101 7.96423 12.0977 7.96423C12.2852 7.96423 16.1617 7.96423 16.1617 7.96423C16.3076 7.96423 16.4535 7.94306 16.5786 7.87955C16.7245 7.81604 16.8704 7.73137 17.0371 7.56201C17.2038 7.39265 18.6836 5.88962 18.6836 5.88962V10.6739L22.2683 8.57815C22.2683 8.57815 22.2683 3.66682 22.2683 3.11641C22.2892 2.54483 21.9765 2.12144 21.5389 1.93092Z" fill="black"/>
+                <path d="M0.0108216 13.7858C0.0108216 13.7858 0.26092 15.7546 0.302603 16.0298C0.344286 16.305 0.448493 16.5378 0.636067 16.7495C0.823641 16.9612 1.0529 17.0459 1.19879 17.0883C1.34468 17.1306 6.65927 18.5701 6.65927 18.5701C6.65927 18.5701 5.24204 23.926 5.20036 24.0742C5.15868 24.2436 5.11699 24.4341 5.20036 24.7516C5.28373 25.0692 5.49214 25.2809 5.63803 25.3867C5.78392 25.4926 7.22199 26.6145 7.40956 26.7627C7.59713 26.9109 7.86807 27.0168 8.13901 27.0168C8.34743 27.0168 8.57668 26.9744 8.7851 26.8474C8.57668 26.9744 13.4744 24.0954 13.4744 24.0954V19.8826L9.3895 22.2748L9.99391 19.9461C10.0356 19.7768 10.0356 19.6074 10.0147 19.4169C9.99391 19.2687 9.97307 19.184 9.86886 18.9935C9.76465 18.8242 7.82639 15.4159 7.82639 15.4159C7.74302 15.2888 7.65966 15.183 7.55545 15.0983C7.4304 14.9925 7.28451 14.9078 7.05525 14.8443C6.84684 14.7808 4.80437 14.2304 4.80437 14.2304L8.88931 11.8382L5.30457 9.74243C5.30457 9.74243 1.11542 12.1981 0.636067 12.4733C0.156712 12.7908 -0.051703 13.2989 0.0108216 13.7858Z" fill="black"/>
+                <path d="M20.8732 26.7841C20.8732 26.7841 22.4363 25.5774 22.6448 25.4081C22.8532 25.2387 22.9991 25.027 23.0824 24.773C23.1658 24.4978 23.1241 24.2649 23.1033 24.1167C23.0616 23.9686 21.6444 18.5703 21.6444 18.5703C21.6444 18.5703 26.9173 17.1308 27.084 17.0885C27.2507 17.0461 27.4383 16.9826 27.6676 16.7498C27.8968 16.5169 27.9802 16.2417 28.001 16.0512C28.0219 15.8606 28.2511 14.0401 28.2928 13.8072C28.3345 13.5532 28.2928 13.278 28.1469 13.0451C28.0427 12.8546 27.8968 12.6852 27.6884 12.5582C27.8968 12.6852 22.9991 9.80615 22.9991 9.80615L19.4143 11.9019L23.4993 14.2941L21.2067 14.908C21.04 14.9503 20.8941 15.035 20.7482 15.1409C20.644 15.2255 20.5606 15.3102 20.4772 15.4796C20.373 15.6489 18.4348 19.0572 18.4348 19.0572C18.3722 19.1842 18.3097 19.3113 18.2889 19.4595C18.268 19.6288 18.268 19.7982 18.3306 20.0099C18.3931 20.2216 18.935 22.2962 18.935 22.2962L14.85 19.904V24.1167C14.85 24.1167 19.0392 26.5724 19.5185 26.8476C19.977 27.144 20.4981 27.0805 20.8732 26.7841Z" fill="black"/>
+            </svg>
+            <div class="languageSwitcher">
+                <p class="pageLanguage">UKR</p>
+                <svg class="languageSwitcherArrow" viewBox="0 0 24 24" fill="none">
+                    <path class="languageSwitcherArrowPath" d="M8.70999 11.7101L11.3 14.3001C11.3925 14.3928 11.5024 14.4663 11.6234 14.5165C11.7443 14.5667 11.874 14.5925 12.005 14.5925C12.136 14.5925 12.2656 14.5667 12.3866 14.5165C12.5076 14.4663 12.6175 14.3928 12.71 14.3001L15.3 11.7101C15.93 11.0801 15.48 10.0001 14.59 10.0001L9.40999 10.0001C8.51999 10.0001 8.07999 11.0801 8.70999 11.7101Z" fill="black"/>
+                </svg>
+                <div class="wrapperLanguage">
+                    <div class="languageOptions">
+                        <svg class="languageChosenSVG" viewBox="0 0 4 21" fill="none">
+                            <path d="M0 0C2.20914 0 4 1.79086 4 4V17C4 19.2091 2.20914 21 0 21V0Z" fill="black"/>
+                        </svg>
+                        <a href="emailSignature.html"><li class="languageChoice">UKR</li></a>
+                        <a href="emailSignatureEng.html"><li class="languageChoice">ENG</li></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="formSection">
+            <div class="formFields">
+                <button class="backButton" onclick="location.href='index.html'">
+                    <svg class="arrowInButton" width="7px" height="16px" viewBox="5 0 7 17" fill="none">
+                        <path id="Vector" d="M5.58711 8.86199L9.74589 12.7578C9.83888 12.8464 9.96242 12.8959 10.0909 12.8959C10.2194 12.8959 10.3429 12.8464 10.4359 12.7578L10.4419 12.7518C10.4871 12.7088 10.5231 12.6571 10.5478 12.5997C10.5724 12.5424 10.5851 12.4807 10.5851 12.4183C10.5851 12.3559 10.5724 12.2941 10.5478 12.2368C10.5231 12.1795 10.4871 12.1278 10.4419 12.0848L6.60811 8.49899L10.4419 4.91521C10.4871 4.87223 10.5231 4.82051 10.5478 4.76317C10.5724 4.70584 10.5851 4.6441 10.5851 4.58171C10.5851 4.51931 10.5724 4.45757 10.5478 4.40024C10.5231 4.34291 10.4871 4.29118 10.4419 4.24821L10.4359 4.24221C10.3429 4.15356 10.2194 4.10411 10.0909 4.10411C9.96242 4.10411 9.83888 4.15356 9.74589 4.24221L5.58711 8.13799C5.53809 8.18469 5.49908 8.24085 5.47241 8.30308C5.44575 8.3653 5.43201 8.4323 5.43201 8.49999C5.43201 8.56769 5.44575 8.63468 5.47241 8.69691C5.49908 8.75913 5.53809 8.8153 5.58711 8.86199Z" fill="#818A8F"/>
+                    </svg>
+                    Назад
+                </button>
+                <h1 class="formHeadlineMobile">Створення підпису до листа</h1>
+                <div class="containerForDropdown">
+                    <p class="fieldTextLabel">Мова підпису</p>
+                    <input class="fieldInput" id="dropdownInputLanguage" type="text" readonly>
+                    <svg class="formDropdownArrow" id="dropdownArrowLanguage" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path id="feArrowUp2" fill-rule="evenodd" clip-rule="evenodd" d="M11.472 6.934L7.73601 10.67L4.00001 6.934L4.93401 6L7.73601 8.802L10.538 6L11.472 6.934Z" fill="#818A8F"/>
+                    </svg>
+                    <div class="dropdownsInForm" id="dropdownsInFormLanguage">
+                        <input class="searchInDropdowns" id="searchInDropdownsLanguage" type="text" placeholder="Пошук" style="display: none;">
+                        <svg class="searchIcon" width="15" height="15" viewBox="0 0 17 17" fill="none" style="display: none;">
+                            <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#818A8F" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.0001 14.0001L11.1001 11.1001" stroke="#818A8F" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <ul class="dropdownList">
+                            <li><button class="buttonsInDropdownsLanguage">Українська</button></li>
+                            <li><button class="buttonsInDropdownsLanguage">Англійська</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fieldTextLabel">Повне ім'я</p>
+                <input class="fieldInput" id="fullnameInput" type="text" placeholder="Іван Сталеваренко" name="fullname" autocomplete="on">
+                <p class="fieldTextLabel">Електронна пошта</p>
+                <input class="fieldInput" id="emailInput" type="text" placeholder="Введіть дані сюди" name="email" autocomplete="on">
+                <div class="containerForDropdown">
+                    <p class="fieldTextLabel">Підприємство</p>
+                    <input class="fieldInput" id="dropdownInputOrganization" type="text" placeholder="Оберіть зі списку" readonly>
+                    <svg class="formDropdownArrow" id="dropdownArrowOrganization" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path id="feArrowUp2" fill-rule="evenodd" clip-rule="evenodd" d="M11.472 6.934L7.73601 10.67L4.00001 6.934L4.93401 6L7.73601 8.802L10.538 6L11.472 6.934Z" fill="#818A8F"/>
+                    </svg>
+                    <div class="dropdownsInForm" id="dropdownsInFormOrganization">
+                        <input class="searchInDropdowns" id="searchInDropdownsOrganization" type="text" placeholder="Пошук">
+                        <svg class="searchIcon" width="15" height="15" viewBox="0 0 17 17" fill="none">
+                            <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#818A8F" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.0001 14.0001L11.1001 11.1001" stroke="#818A8F" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <ul class="dropdownList" id="dropdownListOrganization">
+                            <li><button class="buttonsInDropdownsOrganization"></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fieldTextLabel">Посада</p>
+                <input class="fieldInput" id="positionInput" type="text" placeholder="Введіть дані сюди" name="job-title" autocomplete="on">
+                <p class="fieldTextLabel">Додаткова інформація (опціонально)</p>
+                <input class="fieldInput" id="additionalInfoInput" type="text" placeholder="Наприклад, науковий ступінь" name="degree" autocomplete="on">
+                <p class="fieldTextLabel">Основний номер телефона</p>
+                <input class="fieldInput" id="mobilePhoneInput" type="text" placeholder="+XX XXX XXX XX XX" name="phone" autocomplete="on">
+                <p class="fieldTextLabel">Додатковий номер (за потреби)</p>
+                <input class="fieldInput" id="workPhoneInput" type="text" placeholder="+XX XXX XXX XX XX" name="phone" autocomplete="on">
+            </div>
+            <div class="formDisplay">
+                <h1 class="formHeadline">Створення підпису до листа</h1>
+                <div class="cardFront">
+                    <p class="inputInCard" id="closingRemarkInCard">З повагою,</p>
+                    <b><p class="inputInCard" id="fullnameInCard">ПІБ</p></b>
+                    <p class="inputInCard" id="positionInCard">Посада</p>
+                    <p class="inputInCard" id="additionalInfoInCard"></p>
+                    <p class="inputInCard" id="companyInCard">Підприємство</p>
+                    <p class="inputInCard" id="corporationInCard">Група Метінвест</p>
+                    <p class="inputInCard" id="mobilePhoneInCard">Мобільний телефон</p>
+                    <p class="inputInCard" id="workPhoneInCard"></p>
+                    <p class="inputInCard" id="emailInCard">Електронна пошта</p>
+                    <p class="inputInCard" id="webPageInCard">Сайт</p>
+                    <div class="cardBack">
+                        <img class="qrCodeExample" src="img/qrCodeExample.png" alt="Приклад QR-коду">
+                        <img class="logoCard" src="img/logoCard.png">
+                    </div>
+                </div>
+                <div class="formControl">
+                    <button class="generateCardButton">Копіювати підпис</button>
+                    <button class="getQrButton">Скачати QR-код</button>
+                    <div class="infoMessage">
+                        <svg class="iconInfo" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#2979FF"/>
+                            <path d="M12 16V12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 8H12.01" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="infoText">Подивіться, як додати підпис до листів у Outlook <a class="infoLink" target="_blank" href="instructions/signatureInstructionDesktop.pdf">десктоп</a> або <a class="infoLink" target="_blank" href="instructions/signatureInstructionOnline.pdf">онлайн</a></p>
+                    </div>
+                    <div class="warningMessage">
+                        <svg class="iconWarning" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.29 3.85996L1.82001 18C1.64537 18.3024 1.55297 18.6453 1.55199 18.9945C1.55102 19.3437 1.6415 19.6871 1.81443 19.9905C1.98737 20.2939 2.23673 20.5467 2.53771 20.7238C2.8387 20.9009 3.1808 20.9961 3.53001 21H20.47C20.8192 20.9961 21.1613 20.9009 21.4623 20.7238C21.7633 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.85996C13.5317 3.56607 13.2807 3.32308 12.9812 3.15444C12.6817 2.98581 12.3437 2.89722 12 2.89722C11.6563 2.89722 11.3183 2.98581 11.0188 3.15444C10.7193 3.32308 10.4683 3.56607 10.29 3.85996Z" fill="#FFCC00" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 9V13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 17H12.01" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="warningText"></p>
+                    </div>
+                    <div class="successMessageQR">
+                        <svg class="iconSuccessQR" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="#4CD964"/>
+                            <path d="M16 9L10.5 14.5L8 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="successTextQR">QR-код завантажено на ваш пристрій</p>
+                    </div>
+                    <div class="successMessageCard">
+                        <svg class="iconSuccessCard" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="#4CD964"/>
+                            <path d="M16 9L10.5 14.5L8 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="successTextCard">Підпис скопійовано в буфер</p>
+                    </div>
+                </div>
+            </div>
+            <div id="qrDiv"></div>
+            <canvas id="qrCanvas"></canvas>
+        </section>
+        <section class="footer">
+            <div class="footerWrapper">
+                <p class="errorNotification"><a href="mailto:corp.media@metinvestholding.com"><u>Зворотний зв'язок</u></a></p>
+                <p class="copyright">© 2023 METINVEST</p>
+            </div>
+        </section>
+        <script type="text/javascript" src="js/dropdownPageLanguage.js"></script>
+        <script type="text/javascript" src="js/emailSignature.js"></script>
+    </body>
+</html>
