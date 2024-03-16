@@ -16,12 +16,15 @@ let assetsENG = {
 	"Metinvest Holding LLC": ["Kyiv, 12 Laboratorny Lane"],
 	"Metinvest-SMC LLC": ["Kyiv, 8 Kniaziv Ostrozkych street", "Lviv, 317-C Shevchenko street", "Dnipro, 101-A Solonchakova street"],
 	"Metinvest Digital LLC": ["Kyiv, 12 Laboratorny Lane"],
-	"Metinvest Very Very Very Digital LLC": ["Kyiv, 12 Laboratorny Lane"]
+	"Metinvest Very Very Very Digital LLC": ["Kyiv, 12 Laboratorny Lane"],
+	"Metinvest 1111": ["Kyiv, 12 Laboratorny Lane"]
+}
 }
 let webPagesOfAssetsENG = {
     "Metinvest Holding LLC": "metinvestholding.com",
 	"Metinvest-SMC LLC": "metinvest-smc.com",
 	"Metinvest Digital LLC": "metinvest.digital",
-	"Metinvest Very Very Very Digital LLC": "metinvest.digital"
+	"Metinvest Very Very Very Digital LLC": "metinvest.digital",
+	"Metinvest 1111": "metinvest.digital"
 }
 
